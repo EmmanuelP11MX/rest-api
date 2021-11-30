@@ -19,5 +19,6 @@ const Route = use('Route')
 //registramos usuarios
 Route.group(() => {
   Route.post('usuarios/registro', 'UserController.store');
+  Route.post('usuarios/login', 'UserController.login');
 }).prefix('api/v1/');
 
