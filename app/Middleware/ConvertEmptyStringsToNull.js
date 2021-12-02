@@ -10,7 +10,7 @@ class ConvertEmptyStringsToNull {
       )
     }
 
-    await next()
+    await next();
   }
 }
 

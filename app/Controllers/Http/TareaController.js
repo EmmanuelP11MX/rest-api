@@ -2,7 +2,7 @@
 
 const Proyecto =use('App/Models/Proyecto');
 const Tarea = use('App/Models/Tarea');
-const AutosizacionService = use('App/Services/AutorizacionService');
+const AutorizacionService = use('App/Services/AutorizacionService');
 
 class TareaController{
 
@@ -10,7 +10,7 @@ class TareaController{
         const user = await auth.getUser();
         const {id} = params;
         const proyecto = await Proyecto.find(id);
-        AutosizacionService.verificarPermiso(proyecto. user);
+        AutorizacionService.verificarPermiso(proyecto, user);
         return await proyecto.tareas().fetch();
     }
     

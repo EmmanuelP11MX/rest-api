@@ -1,14 +1,14 @@
 const AccesoProhibidoException = use('App/Exceptions/AccesoProhibidoException');
-const RecursoNoEncontradoException = use('App/Exceptions/RecursoNoEncontradoException')
+const RecursoNoEncontradoException = use('App/Exceptions/RecursoNoEncontradoException');
 
-class AutorizacionService{
+class AutorizacionService {
     verificarPermiso(recurso, user){
-        if(!recurso){
+        if (!recurso){
             throw new RecursoNoEncontradoException();
         }
 
         if (recurso.user_id !== user.id) {
-            throw new AccesoProhibidoException;
+            throw new AccesoProhibidoException();
         };
     }
 }

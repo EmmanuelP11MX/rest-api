@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class Tarea extends Model {
+    proyecto () {
+        return this.belongsTo('App/Models/Proyecto')
+    }
 }
 
 module.exports = Tarea
