@@ -9,7 +9,7 @@ class Proyecto extends Model {
     }
 
     tareas() {
-        return this.hasMany('app/Models/Tarea')
+        return this.hasMany('App/Models/Tarea')
     }
 }
 
